@@ -1,0 +1,413 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ware House</title>
+
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="utf-8">
+            <meta name="keywords" content="" />
+            <script type="application/x-javascript">
+                addEventListener("load", function () {
+                    setTimeout(hideURLbar, 0);
+                }, false);
+
+                function hideURLbar() {
+                    window.scrollTo(0, 1);
+                }
+            </script>
+
+
+
+            <link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+            <!-- css files -->
+            <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+            <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+            <!-- end of css files -->
+
+            <!-- web-fonts -->
+            <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+
+            <!-- end of web-fonts -->
+
+    </head>
+<body>
+ <!-- Navigation -->
+<header>
+	<div class="top-nav">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand text-uppercase" href="{% url 'index' %}">Estate Land <i class="fas fa-building"></i><span>Real Property</span></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-center pr-md-4" id="navbarSupportedContent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'index' %}">Home</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'property' %}">Properties</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="{% url 'howitworks' %}">How it Works</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'about' %}">About us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'contact' %}">contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'faq' %}">Faq</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'login' %}">Login</a>
+						</li>
+
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- end of Navigation -->
+
+<!-- inner page banner -->
+<section class="innerpage_banner py-5">
+	<div class="dot1">
+
+	</div>
+</section>
+<!-- end of inner page banner -->
+
+<section class="howitworks ">
+    <div class="col-sm col1tac">
+        <div class="badge badge-primary text-wrap col1">
+            <h4 class="font-align pt-5"> How it <br>Works </h4>
+        </div>
+    </div>
+    <div class="col-sm col2">
+       <p><b>Sparsh infra</b> provides a seamless, transparent, and lucrative way to make  investments in <b> Commercial Real Estate</b>. Here's how we do it.</p>
+    </div>
+</section>
+
+<!-- how it works section -->
+ <section class="howitworks1">
+     <div class="container">
+         <h4 class="tl-c mt-3 mb-3">Choose Property </h4>
+         <p class="pp1">Choose properties that we have shortlisted after conducting rigorous due diligence, market review, rental yields, target returns and legal title.
+		</p>
+		<hr class="line-height">
+     </div>
+ </section>
+
+<!-- end ofhow it works section -->
+
+<!-- how it works section2 -->
+<section class="howitworks2">
+    <h4>Buy Your Share</h4>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <img src="{% static 'images/buy-fractional-share (1).svg' %}" alt="">
+            </div>
+            <div class="col-sm">
+				<p class="pp1 mt-3"> When a property is listed, investors can review the offer in-depth before paying a 10% token advance to book their fraction. <br>
+					<br>
+					Once the property is fully-funded, investors are made shareholders in a Special Purpose Vehicle (SPV) through which they will own the property.  Sprash Infra manages the asset on the investors’ behalf.
+
+				</p>
+            </div>
+        </div>
+    </div>
+	<h4>Receive Distributions</h4>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+				<p class="pp1"> Start receiving distributions on your investmentstraight to your bank account.
+				</p>
+				<p class="pp1">
+					<ul>
+						<li><i class="fas fa-check-circle"></i> Monitor & Sell Investments</li>
+					<li><i class="fas fa-check-circle"></i> Everything related to the investment, from its current value to lease updates and total earnings can be tracked on our online dashboard</li>
+					<li><i class="fas fa-check-circle"></i> List your shares for potential sale at any time(no lock-in) or wait for the entire property to be sold
+					</li>
+					</ul>
+
+
+				</p>
+			</div>
+            <div class="col-sm">
+                <img src="{% static 'images/earn-rental-income.svg' %}" alt="" class="image-fluid">
+            </div>
+		</div>
+		<hr class="line-height">
+    </div>
+
+</section>
+<!--end of  how it works section2 -->
+
+
+<!-- how it works section3 -->
+<section class="warehouse3">
+    <div class="container tl-c">
+        <h4>OUR FEE</h4>
+        <div class="row">
+			<div class="col-sm tl-c">
+				<img src="{% static 'images/management-fee.svg' %}" alt="">
+				<p class="fontstyle-24">One Time Set up/ Sourcing Fees</p>
+				<p>To cover the cost of managing the investment and ensure that investors have a hassle-free experience,Sparsh infra charges an <b>annual fee of 1% </b>as the Asset Purchase Price</p>
+
+			</div>
+            <div class="col-sm tl-c">
+				<img src="{% static 'images/management-fee.svg' %}" alt="">
+				<p class="fontstyle-24">Management Fee</p>
+                <p>To cover the cost of managing the investment and ensure that investors have a hassle-free experience,Sparsh infra charges an <b>annual fee of 1% </b>as the Asset Purchase Price</p>
+           </div>
+            <div class="col-sm">
+				<img src="{% static 'images/performance-fee.svg' %}" alt="" class="image-fluid">
+				<p class="fontstyle-24">Performance Fee
+                </p>
+				<p>Sparsh infra charges a<b> 20% performance fee</b> at the time of sale .
+				after the asset value has appreciated by 5%</p>
+
+            </div>
+
+
+        </div>
+        <hr class="line-height">
+    </div>
+</section>
+
+<!-- end of how it works section3 -->
+
+<!-- news letter section -->
+<section class="newsletter pt-3 pb-3">
+	<div class="container">
+
+			<div class="row">
+				<div class="col-sm pl-5 pd-0">
+				<h3>READY TO BUILD YOUR COMMERCIAL REAL ESTATE<br> PORTFOLIO?</h3>
+				</div>
+				<div class="w-100"></div>
+				<div class="col-sm mr-100">
+					<div class="pt-3 mr-1">
+						<a href="{% url 'contact' %}" class="bg-cr pad-1 ">BECOME AN INVESTOR</a>
+					</div>
+				</div>
+
+			  </div>
+
+		</div>
+	</div>
+</section>
+<!-- end of news letter sections -->
+
+
+<!-- footer -->
+<section class="agile-footer footer-section py-5">
+	<div class="container">
+		<div class="agileits_ailayouts-footer-bottom">
+			<div class="row ai_agile-footer-grids py-5 my-4">
+				<div class="col-sm-4 ai_agile-footer1 f1">
+					<h2 class="mb-3">
+						<a href="{% url 'index' %}">Sparsh infra</a>
+					</h2>
+					<p style="color: #f1f1f1;"> @ Sparsh Infra was incorporated in the year 2015 with an objective of Investment in real estate and today has an net worth of 50 Million. Our future objective is to make real estate investing more accessible to small investors and provide them potential returns on diversified assets by investing with Integrity, transparency & discipline.</p>
+				</div>
+				<div class="col-lg-7 col-md-9 mt-lg-0 mt-4 row ai_agile-footer1 f2">
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Company</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a class="page-scroll scroll" href="{% url 'property' %}">Properties</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'about' %}">About Us</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'howitworks' %}">How It Works</a>
+							</li>
+							<li>
+								<!-- <a class="page-scroll scroll" href="contact.html">Contact Us</a> -->
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Others</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a href="{% url 'faq' %}">FAQ</a>
+							</li>
+							<li>
+								<a href="{% url 'howitworks' %}">knowledge Center</a>
+							</li>
+							<li>
+								<a href="">Terms and Conditions</a>
+							</li>
+							<li>
+								<a href="{% url 'privacy' %}">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4 inner-li ml-30">
+						<h5 class="mb-3">Contact Us</h5>
+						<ul class="">
+							<li>
+								<a href="#" style="color: #fff;">Phone no:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Email -ID:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Address:</a>
+							</li>
+						</ul>
+					</div>
+				<!-- </div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1" style="text-align: center;">
+				<h5 class="mb-3">Need Help? </h5>
+					<ul class="footer-social-icons">
+						<li>
+							<a href="contact.html">
+								Contact us
+							</a>
+						</li>
+						<li>
+							<a href="about.html">
+								knowledge base
+							</a>
+						</li>
+						<li>
+							<a href="dashboard.html">
+								 Pdf document
+							</a>
+						</li>
+					</ul>
+				</div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1">
+					<ul class="footer-social-icons">
+						<li>
+							<a href="termsandconditions.html">Terms and Conditions</a>
+						</li>
+
+						<li>
+							<a href="privacy.html">Privacy and Policies</a>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+		<div class="agileits_ailayouts-copyright text-center">
+			<p>© 2018 Estate Land. All Rights Reserved | Design by
+				<a href="http://aitareyasolutions.com/" target="=_blank"> Aitareya solutions</a>
+			</p>
+		</div>
+	</div>
+</section>
+<!-- //footer -->
+<!-- js-scripts -->
+
+	<!-- js -->
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+	<!-- //js -->
+
+	<!-- odometer-script -->
+	<script src="{% static 'js/odometer.js' %}"></script>
+	<script>
+		window.odometerOptions = {
+			format: '(ddd).dd'
+		};
+	</script>
+	<script>
+		setTimeout(function () {
+			jQuery('#w3l_stats1').html(125);
+		}, 1500);
+	</script>
+	<script>
+		setTimeout(function () {
+			jQuery('#w3l_stats2').html(330);
+		}, 1500);
+	</script>
+	<script>
+		setTimeout(function () {
+			jQuery('#w3l_stats3').html(542);
+		}, 1500);
+	</script>
+	<script>
+		setTimeout(function () {
+			jQuery('#w3l_stats4').html(222);
+		}, 1500);
+	</script>
+	<!-- //odometer-script -->
+
+	<!-- Banner Responsive slider -->
+	<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- // Banner Responsive slider -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+
+<!-- //js-scripts -->
+</body>
+</html>

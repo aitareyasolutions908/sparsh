@@ -1,0 +1,842 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>faq's</title>
+
+            <!-- Meta tag Keywords -->
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta charset="utf-8">
+            <meta name="keywords" content="Estate Land Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+            Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+            <script type="application/x-javascript">
+                addEventListener("load", function () {
+                    setTimeout(hideURLbar, 0);
+                }, false);
+
+                function hideURLbar() {
+                    window.scrollTo(0, 1);
+                }
+            </script>
+            <!--// Meta tag Keywords -->
+
+            <!-- Popup css (for Video Popup) -->
+            <link href="{% static 'css/popuo-box.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+            <!-- css files -->
+            <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+            <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" /> <!-- Style-CSS -->
+            <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+            <!-- //css files -->
+
+            <!-- web-fonts -->
+            <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese" rel="stylesheet">
+
+            <!-- //web-fonts -->
+
+            <!-- chart.js cdn -->
+             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+                 <!-- //chart.js cdn -->
+
+				 <style>
+					@import url("https://fonts.googleapis.com/css?family=Oswald:500,600,700|Roboto");
+
+					body {
+					  margin: 0;
+					  background-image: url(https://images.pexels.com/photos/1020317/pexels-photo-1020317.jpeg?cs=srgb&dl=abstract-art-background-1020317.jpg&fm=jpg);
+					  background-size: cover;
+					  font-family: "Roboto", sans-serif;
+					}
+
+					h1 {
+					  text-align: center;
+					  font-family: "Oswald", sans-serif;
+					  font-size: 60px;
+					  margin: 50px 0 0;
+					  color: #fff;
+					}
+					p{
+						color:#000;
+					}
+
+					.container {
+					  /* max-width: 60%; */
+					  margin: 0 auto;
+					  padding: 70px 0 20px;
+					  width: 90%;
+					}
+
+					.acc h6 {
+					  font-size: 25px;
+					  background-color:#00ad5f;
+					  color: #fff;
+					  padding: 15px;
+					  margin: 0;
+					  cursor: pointer;
+					  font-family: "Oswald", sans-serif;
+					  letter-spacing: 2px;
+					  position: relative;
+					}
+
+					.acc h6:after {
+					  content: "+";
+					  position: absolute;
+					  right: 20px;
+					  font-size: 40px;
+					  top: 50%;
+					  transform: translateY(-50%);
+					}
+
+					.acc.active h6:after {
+					  content: "-";
+					}
+
+					.content {
+						position: relative;
+					  background-color: #fff;
+					  display: none;
+					  color:#000;
+					}
+
+					.content-inner {
+					  padding: 1px;
+					}
+					.content-inner p{
+						color:#222;
+					}
+
+					.content * {
+					  margin-top: 0;
+					  line-height: 1.5;
+					}
+
+					.acc {
+					  border-bottom: 1px solid #fff;
+					}
+				  </style>
+	</head>
+<body>
+ <!-- Navigation -->
+ <header>
+	<div class="top-nav">
+		<div class="container-fluid">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<a class="navbar-brand text-uppercase" href="{% url 'index' %}">Estate Land <i class="fas fa-building"></i><span>Real Property</span></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedcontent" aria-controls="navbarSupportedcontent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse justify-content-center pr-md-4" id="navbarSupportedcontent">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'property' %}">Properties</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'howitworks' %}">How it Works</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'about' %}">About us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'contact' %}">contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active " href="{% url 'faq' %}">FAQ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="{% url 'login' %}">Login</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- end of Navigation -->
+
+
+<!-- inner page banner -->
+<section class="innerpage_banner py-5">
+	<div class="dot1">
+
+	</div>
+</section>
+<!-- end of inner page banner -->
+
+
+<!-- faq section -->
+<div class="container">
+	<!-- Accordion Starts-->
+	<div class="acc">
+	  <h6>1)What is PropShare?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			PropShare is a tech platform that allows its users to invest in
+			Grade A commercial, retail, and warehousing real estate assets
+			tenanted to multinational tenants.
+		  </p>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Accordian -->
+	<div class="acc">
+	  <h6>
+		2) What are the different investment opportunities available?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			PropShare offers investors an opportunity to invest in completed
+			and rent generating Grade A commercial, retail, and warehousing
+			properties with up to 8-10% yields and 17-20% target IRRs.
+		  </p>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Accordian -->
+	<div class="acc">
+	  <h6>3) Is PropShare regulated by any government body?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			PropShare Capital Advisors Private Limited is registered with the
+			Securities & Exchange Board of India (SEBI) as a Portfolio Manager
+			under the SEBI (Portfolio Manager) Regulations, 1993. As an
+			investor, you should insist on using a regulated platform as it
+			ensures investors are protected by having access to statutory
+			grievance redressal mechanisms and strict disclosure and reporting
+			standards which are imposed by SEBI.
+		  </p>
+		</div>
+	  </div>
+	</div>
+
+	<!-- Accordian -->
+	<div class="acc">
+	  <h6>4) What is the minimum investment?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			As a Portfolio Manager, the minimum portfolio we can manage per
+			investor is Rs. 50 lakhs. This threshold is proposed to come into
+			effect from January 1, 2020. If you are an existing investor, your
+			minimum investment will continue to be Rs. 25 lakhs. For new
+			clients, the minimum investment is proposed to be increased to Rs.
+			50 lakhs from Rs. 25 Lakhs with effect from January 1, 2020.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>5) What type of returns can investors make?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			Investors can benefit from returns in two ways: Distributions -
+			The annual yield generated from rental income can range between
+			8-10%, which are typically distributed on a monthly basis to all
+			investors Capital Appreciation - Any appreciation in the
+			underlying property accrues to investors and is realized at the
+			time of sale
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>6) How does PropShare shortlist properties?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			We shortlist properties after examining various metrics like
+			location, developer, quality of development, scope of price
+			appreciation, micro and macro market indicators, legality of title
+			and earning potential. We rely on the extensive investment
+			experience of our team which comes with more than $1 billion of
+			investment experience in Indian real estate from The Blackstone
+			Group, the world's largest real estate fund.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>7) Why does PropShare focus on commercial real estate?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			We believe that commercial real estate, if underwritten sensibly
+			and conservatively, offers the best after-tax returns to
+			investors. PropShare founders and investing team come from core
+			real estate investing backgrounds having invested >$1 billion in
+			Indian real estate. We closely follow the maxim “Risk comes from
+			not knowing what you are doing”.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>8) What are PropShare fees?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			We charge an annual management fee of 1.0% and a performance fee
+			of 20% at the time of sale after the investor has made 8% annual
+			returns. For e.g. If an investor had invested Rs. 100 and the
+			investor makes Rs. 108 at the time of exit, we DO NOT charge any
+			performance fees as we believe we were not able to deliver returns
+			greater than the risk-free rate. However, if the investor had made
+			Rs. 115 at the time of exit, we will charge 20% of Rs. 7 (115-108)
+			i.e. Rs. 1.4 as our performance fee. This way our fees are aligned
+			with investor returns. In addition, the platform may charge a
+			one-time set-up / sourcing fee of up to 2% of purchase
+			consideration which is generally shared with third property
+			consultants.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>9) How can I diversify through PropShare?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			Investment risk can be reduced with appropriate diversification of
+			holdings. In the case of PropShare, investors can diversify by
+			investing across locations, tenants (technology, financial
+			services) and asset classes (retail, office, warehousing). Please
+			speak to your investment advisor for more details.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>10) Who takes care of tenancy and management?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			PropShare has a separate Asset Management team that takes care of
+			all asset management functions related to an investment.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>How do I transfer money for my investment?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			The investment is made through a Special Purpose Vehicle. Your
+			investment is routed through an Escrow account, the proceeds of
+			which are finally transferred to the Seller from the SPVs bank
+			account. You will need to transfer your investment from a
+			domestic, NRE or NRO account to the Escrow account.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>
+		How can I get specific questions answered on a particular property?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			You can sign-up and schedule a call with one of our investment
+			advisors who can answer your specific questions. You can also send
+			an email to <a href="">info@propertyshare.in</a>
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>Can I schedule a visit to a property listed on the platform?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			Yes, we routinely organize site visits for interested investors.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>                                                                 What kind of documentation will I need to sign?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>         As a SEBI registered Portfolio Manager we are mandated to complete the following documentation with all our clients:
+
+			  <ol>
+				  <li>Risk Profiling - You will need to fill-up an online risk profile questionnaire  </li>
+				  <li>Know Your Customer (KYC) - We will need certain documents to complete your KYC  </li>
+				  <li>Portfolio Management Agreement – Upon successful completion of risk profiling and KyC, you will need to sign a PMS agreement with PropShare</li>
+				  <li>Subscription Agreement – Once onboarded as a client, you will need to sign a product note for confirming your interest and a subscription agreement for subscribing to securities in the SPV</li>
+			  </ol>
+
+
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>                                                                     How will I know about new listings?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>Once you are registered on the platform, you will receive notifications on new listings, resales, funding updates etc.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>                                                               Do I need to be present for property registration?</h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  No, PropShare arranges for the property registration on behalf of investors. Our proprietary tech and dashboard allows you to sign as well as view all investment related documents remotely.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>  What will be my proof of investment?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  Deed in conjunction with the certificates for the securities you subscribe to from the SPV constitute proof of your investment. You will receive a certificate for the securities that you subscribe to from the SPV.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>What is the investment process?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  Once you decide to invest, your investment advisor will guide you through the investment process.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>   Is my liability limited to my capital?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  <span>As a shareholder in the SPV, your liability is always limited to invested capital.
+			  </span> </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> Are you guaranteeing the rent or returns?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  PropShare DOES NOT guarantee any rents or returns. As an investor, you are advised to stay away from guaranteed returns schemes. While most properties listed on the platform are leased and rents are known in advance, a re-leasing risk always exists in case the tenant vacates.
+		  </p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>                                                                            What are the deductions from rent?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  <span>In commercial properties, the typical deductions are property management fee and property tax.
+			  </span></p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>                                                                    Is investing through PropShare risky?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  Yes, as with any real estate investment, investment through PropShare carries inherent risks of loss of capital. Please read through our Disclosure Document to understand the risks in detail.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>Who decides exit timing and pricing?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  Investors decide the exact time and price at which to sell their investment.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> What are the reporting standards and disclosures?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  SEBI mandates strict reporting and disclosure standards for Portfolio Managers including a half-yearly report containing information such as (a) the value of the portfolio; (b) transactions undertaken; (c) beneficial interest received; (d) expenses incurred; (e) details of risk foreseen.</p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> How can I exit?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>You can exit your investment in two ways:<p>
+			  <span>
+
+				  <ul type="a"><br>
+					  <li><b>Resale of your ownership share: </b>You can choose to sell your shares to anyone at a mutually agreed price either privately or through the PropShare platform.</li>
+					  <br>
+					  <li><b>Sale of property: </b>If a sale is mandated and authorized by all the shareholders of the SPV, the property manager will sell the property and you will receive your share from the sale proceeds.</li>
+				  </ul>
+			  </span>
+	  </div>
+	</div>
+  </div>
+	<div class="acc">
+	  <h6>What is the investment process?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  You will own securities of an SPV which owns the property you have selected to invest in. </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>  Are the rents transferred monthly or annually?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  <span>Typically, rents and interest on security deposit are transferred to you every month.
+			  </span>
+			</p>
+		  </div>
+	  </div>
+  </div>
+	<div class="acc">
+	  <h6> Can I get a copy of tenant agreement or LoI signed with the tenant?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  <span>Yes. We share all the details before property registration.
+			  </span>
+		   </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> How will I be taxed on my share?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>Rents: Rents received from the property is distributed as interest on debentures which is taxable directly in the hands of the investors. Interest income would be subject to withholding tax at following rates: </p> </div>
+
+		  <div class="table_wrapper">
+			  <table>
+				  <tr>
+					  <th>Residential status as per Income Tax Act, 1961</th>
+					  <th>Tax rate</th>
+				  </tr>
+				  <tr>
+					  <td>Resident</td>
+					  <td>10%</td>
+				  </tr>
+				  <tr>
+					  <td>
+						  *Non-resident Individual (“NRI”)
+					  </td>
+					  <td>
+						  30% (plus applicable surcharge and cess)*
+					  </td>
+				  </tr>
+			  </table>
+		  </div>
+		  <p>*NRI investor can explore benefits under Double Taxation Avoidance Agreement (“DTAA”) entered with the respective country, subject to availability of Tax residency Certificate (“TRC”).</p>
+		  <p>Sale of equity shares and debentures would be subject to capital gain tax at applicable rate. The applicable tax rate would depend on the period for which shares and debentures were held by the investor immediately before the date of transfer. The benefit of indexation may be explored on sale of equity shares. The investors can also explore investment linked exemptions available under Indian tax law for claiming exemptions.</p>
+		  <p>Note: The above mentioned tax implications are indicative.  We request you connect with your tax advisor for definitive implications.</p>
+	</div>
+	</div>
+	<div class="acc">
+	  <h6>
+		  Does tenant pay GST?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>
+			  Yes, the tenant pays GST over and above the rent which is filed by SPV with assistance from our property management team.</p>
+	  </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> Is the TDS deposited against my name?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		<p>
+		  Yes, the TDS on your distributions is paid and deposited against your PAN number and can be claimed back at the end of the year.
+		</p>
+	  </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>
+		  I am an NRI. What taxes will I need to pay?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		  <p>Under Indian income-tax law, an NRI is required to pay tax on any Indian sourced or received income. This will include interest income on the debentures and capital gains on sale of shares and debentures. A basic exemption limit is provided under the Indian tax law. If the income in India does not exceed the basic exemption limit, the NRI will not have to pay tax in India. If the income in India exceeds basic exemption limit, the NRI will have to pay taxes in India as per the applicable slab rates. </p>
+		  <p>*NRI investor can explore benefits under Double Taxation Avoidance Agreement (“DTAA”) entered with the respective country, subject to availability of Tax residency Certificate (“TRC”).</p>
+	  </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6> Can I transfer the investment amount from an NRE account?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		<p>
+		  Yes, you can transfer the investment from your NRE or NRO account
+	  </p>
+	  </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>   Can I transfer my investment in foreign currency?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		<p>
+		  No, RBI and FEMA guidelines do not allow NRIs to purchase securities with foreign currency. Your transfer must only be in INR. </p>
+	  </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>   Can I get rents and sale proceeds credited to my NRE account?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+	  <p>
+		  No, since NRE is a freely repatriable account, INR deposits cannot be made into an NRE account. The rents and sale proceeds will be transferred to your NRO account from where you can transfer it to your NRE account. Please speak to your banker for a more detailed understanding of your specific requirements.
+	  </p>
+   </div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>  I do not have any taxable income in India. Why do I still need to pay tax?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+		<p>
+		  Even if an NRI’s income in India does not exceed the basic exemption limit, taxes may be withheld on interest and capital gains. Such an NRI can claim refund of taxes withheld by filing a tax return in India.
+		</p>
+		</div>
+	  </div>
+	</div>
+	<div class="acc">
+	  <h6>   What is a TRC? How can I get a TRC?
+	  </h6>
+	  <div class="content">
+		<div class="content-inner">
+	   <p>
+		   A TRC is a Tax Residency Certificate provided by the country where you are currently residing. India has a Double Tax Avoidance Agreement (DTAA) with almost all major countries that reduce TDS to lower thresholds of 10-15% (depending on the provisions of the DTAA). However, the benefit of the reduced tax rate is only available to investors who are able to produce a TRC. Please speak to your investment advisor on how you can procure a TRC for your country of residence.
+	  </p>
+  </div>
+	  </div>
+	</div>
+
+  </div>
+
+
+<!-- footer -->
+<section class="agile-footer footer-section py-5">
+	<div class="container">
+		<div class="agileits_ailayouts-footer-bottom">
+			<div class="row ai_agile-footer-grids py-5 my-4">
+				<div class="col-sm-4 ai_agile-footer1 f1">
+					<h2 class="mb-3">
+						<a href="{% url 'index' %}">Sparsh infra</a>
+					</h2>
+					<p style="color: #f1f1f1;"> @ Sparsh Infra was incorporated in the year 2015 with an objective of Investment in real estate and today has an net worth of 50 Million. Our future objective is to make real estate investing more accessible to small investors and provide them potential returns on diversified assets by investing with Integrity, transparency & discipline.</p>
+				</div>
+				<div class="col-lg-7 col-md-9 mt-lg-0 mt-4 row ai_agile-footer1 f2">
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Company</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a class="page-scroll scroll" href="{% url 'property' %}">Properties</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'about' %}">About Us</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'howitworks' %}">How It Works</a>
+							</li>
+							<li>
+								<!-- <a class="page-scroll scroll" href="contact.html">Contact Us</a> -->
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Others</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a href="{% url 'faq' %}">FAQ</a>
+							</li>
+							<li>
+								<a href="{% url 'howitworks' %}">knowledge Center</a>
+							</li>
+							<li>
+								<a href="{% url 'terms' %}">Terms and Conditions</a>
+							</li>
+							<li>
+								<a href="{% url 'privacy' %}">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4 inner-li ml-30">
+						<h5 class="mb-3">Contact Us</h5>
+						<ul class="">
+							<li>
+								<a href="#" style="color: #fff;">Phone no:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Email -ID:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Address:</a>
+							</li>
+						</ul>
+					</div>
+				<!-- </div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1" style="text-align: center;">
+				<h5 class="mb-3">Need Help? </h5>
+					<ul class="footer-social-icons">
+						<li>
+							<a href="contact.html">
+								Contact us
+							</a>
+						</li>
+						<li>
+							<a href="about.html">
+								knowledge base
+							</a>
+						</li>
+						<li>
+							<a href="dashboard.html">
+								 Pdf document
+							</a>
+						</li>
+					</ul>
+				</div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1">
+					<ul class="footer-social-icons">
+						<li>
+							<a href="termsandconditions.html">Terms and Conditions</a>
+						</li>
+
+						<li>
+							<a href="privacy.html">Privacy and Policies</a>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+		<div class="agileits_ailayouts-copyright text-center">
+			<p>© 2018 Estate Land. All Rights Reserved | Design by
+				<a href="http://aitareyasolutions.com/" target="=_blank"> Aitareya solutions</a>
+			</p>
+		</div>
+	</div>
+</section>
+<!-- //footer -->
+<!-- js-scripts -->
+
+	<!-- js -->
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- //js -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+	<!-- Banner Responsive slider -->
+	<script src="{% static 'js/responsiveslides.min.js' %}"></script>
+	<script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			// Slideshow 4
+			$("#slider4").responsiveSlides({
+				auto: true,
+				pager: false,
+				nav: true,
+				speed: 500,
+				namespace: "callbacks",
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			});
+
+		});
+	</script>
+	<!-- // Banner Responsive slider -->
+
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/chart.js' %}"></script>
+<!-- //js-scripts -->
+<script>
+	$(document).ready(function () {
+	  $(".acc h6").click(function () {
+		$(this).next(".content").slideToggle();
+		$(this).parent().toggleClass("active");
+		$(this).parent().siblings().children(".content").slideUp();
+		$(this).parent().siblings().removeClass("active");
+	  });
+	});
+  </script>
+
+</body>
+</html>

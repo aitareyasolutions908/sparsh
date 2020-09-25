@@ -1,0 +1,240 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- inner page banner -->
+<section class="innerpage_banner py-5">
+	<div class="dot1">
+
+	</div>
+</section>
+
+
+
+<!-- end of Properties -->
+
+<section class="propertygrid mt-3">
+	<div class="container-sm">
+		<div class="row">
+			<div class="col-sm">
+				<div class="card mb-5">
+					<div class="card-body mr">
+						<div class="row">
+							<div class="col">
+								<p class="propertyname">Mittal Towers</p>
+							</div>
+							<div class="col">
+								<span class="smallcard">sale</span>
+							</div>
+						</div>
+						<p> <small><i class="fas fa-map-marker"></i>M G Road, Bangalore</small></p>
+
+					</div>
+					<img src="{% static 'images/p4.jpg' %}" class="card-img-top propertyimage" alt="...">
+					<div class="propertybuldinginfo">
+						<form action="" method="post">
+							<div class="lines">
+								<label for="">Area</label>
+								<label for="" class="al-r">350</label>
+							</div>
+							<div class="lines">
+								<label for="">Price psf</label>
+								<label for="" class="al-r4">20,000</label>
+							</div>
+							<div class="lines">
+								<label for="">RentalYield</label>
+								<label for="" class="al-r3">7.5%</label>
+							</div>
+							<div class="lines">
+								<label for="">Min Investment</label>
+								<label for="" class="al-r2">25 lakhs</label>
+							</div>
+							<div class="lines">
+								<label for="">No.of Investors</label>
+								<label for="" class="al-r1">20</label>
+							</div>
+
+							<div id="progressbar1">
+
+							</div>
+						</form>
+					</div>
+					<div class="propertyviewbutton">
+						<a href="{% url 'viewproperty' %}" class="viewbutton">View Property</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card mb-5">
+					<div class="card-body mr">
+						<div class="row">
+							<div class="col">
+								<p class="propertyname">Mittal Towers</p>
+							</div>
+							<div class="col">
+								<span class="smallcard">sale</span>
+							</div>
+						</div>
+						<p> <small><i class="fas fa-map-marker"></i>M G Road, Bangalore</small></p>
+
+					</div>
+					{% if property %}
+					{% for prop in property%}
+					<img src="{% static 'images/p1.jpg' %}" class="card-img-top propertyimage" alt="...">
+
+					<div class="propertybuldinginfo">
+						<form action="" method="post">
+							<div class="lines">
+								<label for="">Area</label>
+								<label for="" class="al-r">350</label>
+							</div>
+							<div class="lines">
+								<label for="">Price psf</label>
+								<label for="" class="al-r4">20,000</label>
+							</div>
+							<div class="lines">
+								<label for="">RentalYield</label>
+								<label for="" class="al-r3">7.5%</label>
+							</div>
+							<div class="lines">
+								<label for="">Min Investment</label>
+								<label for="" class="al-r2">25 lakhs</label>
+							</div>
+							<div class="lines">
+								<label for="">No.of Investors</label>
+								<label for="" class="al-r1">20</label>
+							</div>
+
+							<div id="progressbar2">
+
+							</div>
+						</form>
+					</div>
+
+					<div class="propertyviewbutton">
+						<a href="{% url 'viewproperty' %}" class="viewbutton">View Property</a>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-sm">
+				<div class="card mb-5">
+					<div class="card-body mr">
+						<div class="row">
+							<div class="col">
+								<p class="propertyname">Mittal Towers</p>
+							</div>
+							<div class="col">
+								<span class="smallcard">sale</span>
+							</div>
+						</div>
+						<p> <small><i class="fas fa-map-marker"></i>M G Road, Bangalore</small></p>
+
+					</div>
+					{% endfor %}
+					{% endif %}
+					<img src="{% static 'images/p2.jpg' %}" class="card-img-top propertyimage" alt="...">
+					<div class="propertybuldinginfo">
+						<form action="" method="post">
+							<div class="lines">
+								<label for="">Area</label>
+								<label for="" class="al-r">350</label>
+							</div>
+							<div class="lines">
+								<label for="">Price psf</label>
+								<label for="" class="al-r4">20,000</label>
+							</div>
+							<div class="lines">
+								<label for="">RentalYield</label>
+								<label for="" class="al-r3">7.5%</label>
+							</div>
+							<div class="lines">
+								<label for="">Min Investment</label>
+								<label for="" class="al-r2">25 lakhs</label>
+							</div>
+							<div class="lines">
+								<label for="">No.of Investors</label>
+								<label for="" class="al-r1">20</label>
+							</div>
+
+							<div id="progressbar1">
+
+							</div>
+						</form>
+					</div>
+					<div class="propertyviewbutton">
+						<a href="{% url 'viewproperty' %}" class="viewbutton">View Property</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+</section>
+
+
+
+<!-- js-scripts -->
+
+	<!-- js -->
+	<script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
+	<script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<!-- //js -->
+
+	<!-- gallery js-->
+	<script src="{% static 'js/lightGallery.js' %}"></script>
+	<script>
+    	 $(document).ready(function() {
+			$("#lightGallery").lightGallery({
+				mode:"fade",
+				speed:800,
+				caption:true,
+				desc:true,
+				mobileSrc:true
+			});
+		});
+    </script>
+	<!-- //gallery js-->
+
+	<!-- start-smoth-scrolling -->
+	<script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+			});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- start-smoth-scrolling -->
+	<script>
+
+	</script>
+
+
+<!-- //js-scripts -->
+
+{% endblock %}

@@ -1,0 +1,479 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>view property</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="keywords" content="" />
+    <script type="application/x-javascript">
+      addEventListener("load", function () {
+          setTimeout(hideURLbar, 0);
+      }, false);
+
+      function hideURLbar() {
+          window.scrollTo(0, 1);
+      }
+    </script>
+
+    <link
+      href="{% static 'css/popuo-box.css' %}"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}" />
+    <!-- end of css files -->
+
+    <!-- web-fonts -->
+    <link
+      href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+      rel="stylesheet"
+    />
+
+    <!-- end of web-fonts -->
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <header>
+      <div class="top-nav">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-uppercase" href="{% url 'index' %}"
+              >Estate Land <i class="fas fa-building"></i
+              ><span>Real Property</span></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="collapse navbar-collapse justify-content-center pr-md-4"
+              id="navbarSupportedContent"
+            >
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'index' %}">Home</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link active" href="{% url 'property' %}">Properties</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'howitworks' %}">How it Works</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}">Login</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end of Navigation -->
+
+    <!-- inner page banner -->
+    <section class="innerpage_banner py-5">
+      <div class="dot1"></div>
+    </section>
+    <!-- end of inner page banner -->
+
+    <!-- slider section of the bulding -->
+    <section class="carousel">
+      <div class="rew">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide size"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="{% static 'images/1.jpeg' %}" class="img12 d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/3.jpg' %}" class="img13 d-block w-100" alt="..." />
+            </div>
+            <div class="carousel-item">
+              <img src="{% static 'images/4.jpg' %}" class="img14 d-block w-100" alt="..." />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="property--table">
+        <div class="row1">
+          <p>min investment :</p>
+          <p>Rs.10 lakhs</p>
+        </div>
+        <div class="row1">
+          <p>Avg.Rental yield:</p>
+          <p>9.6%</p>
+        </div>
+        <div class="row1">
+          <p>Target IRR:</p>
+          <p>18%</p>
+        </div>
+        <div class="row1">
+          <p>Multiple :</p>
+          <p>2.09 X</p>
+        </div>
+        <div class="row1">
+          <p>Gross Price :</p>
+          <p>Rs.8,607</p>
+        </div>
+        <div class="row1">
+          <p>Status:</p>
+          <p>Closed</p>
+        </div>
+        <div class="row1">
+          <p>Funded:</p>
+          <p>100%</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of slider section bulding -->
+
+    <!-- about bulding -->
+    <section class="viewproperty2">
+      <div class="container">
+        <div class="Property11">
+          <p id="about">About</p>
+
+          <p id="location">location</p>
+          <p id="tenancy">tenancy</p>
+
+          <p id="floorplan">Floor plan</p>
+
+          <p id="prize">prize</p>
+        </div>
+        <hr />
+        <div id="aboutbulding">
+          <div class="row">
+            <div class="col-sm">
+              <p class="aboutbulding">
+                Brigade Metropolis is a mixed-use development in Whitefield,
+                Bangalore. It consists of 1500+ residential apartments, a retail
+                block, and commercial office spaces. The property has blue-chip
+                tenants including E&Y, Honeywell, GE, and EYGBS India. It was
+                developed by the Brigade Group, one of the leading property
+                developers in South India.
+                <br />
+                The Commercial part of the development is Tower A and Tower B
+                which consists of over 7.5 lakhs sft of Grade A Commercial
+                Property. The Investment opportunity is the third floor in Tower
+                A (22540 sft) occupied by Capgemini, a Fortune 200 company. The
+                per square foot cost of the property is approximately INR
+                8607/sft with a rental yield of 8.76% and an IRR of 18%.
+              </p>
+            </div>
+            <div class="col-sm">
+              <img src="images/1.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="buldinglocation" id="buldinglocation">
+            The property is located on the Whitefield main road, in one of the
+            fastest growing residential and IT hubs in Bangalore. The property
+            is situated close to an upcoming metro station which is expected to
+            open in 2021. It also has extensive city bus connectivity.
+          </p>
+        </div>
+
+        <div class="buldingfloorplan" id="buldingfloorplan">
+          <p class="floorplanpp">
+            Each tower spans 13 floors (2B +G+12) and measure 2,86,000 sqft.
+            Strata's investment opportunity is located on the 3rd Floor of Tower
+            A measuring about 22,540 sft of office space and is completely
+            leased to Capgemini.
+          </p>
+          <div class="floorplan" id="buldingfloorplan">
+            <h4>22,540 Sqrt</h4>
+            <img src="images/floor-plan.png" alt="" />
+          </div>
+        </div>
+        <div class="buldingtenancy" id="buldingtenancy">tenency</div>
+        <div class="buldingprize" id="buldingprize" style="text-align: center;">
+          <table style="border: 1px solid #222; margin-bottom: 20px;">
+            <tr>
+              <td class="twidth-20">Purchase Price</td>
+              <td>Rs. 18,59,55,000</td>
+            </tr>
+            <tr>
+              <td>Stump duty</td>
+              <td>
+                Rs. 4,64,888
+              </td>
+            </tr>
+            <tr>
+              <td>Acquisition Fee(one time)</td>
+              <td>Rs. 37,19,100</td>
+            </tr>
+            <tr>
+              <td>Brokerage</td>
+              <td>Rs. 18,59,550</td>
+            </tr>
+            <tr>
+              <td>Legal Fee</td>
+              <td>Rs. 10,00,000</td>
+            </tr>
+            <tr>
+              <td>Reserve(refunded on sale)</td>
+              <td>Rs. 10,01,462</td>
+            </tr>
+            <tr>
+              <td>All in price</td>
+              <td>Rs. 19,40,00,000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- end of about bulding -->
+    <!-- footer -->
+<section class="agile-footer footer-section py-5">
+	<div class="container">
+		<div class="agileits_ailayouts-footer-bottom">
+			<div class="row ai_agile-footer-grids py-5 my-4">
+				<div class="col-sm-4 ai_agile-footer1 f1">
+					<h2 class="mb-3">
+						<a href="{% url 'index' %}">Sparsh infra</a>
+					</h2>
+					<p style="color: #f1f1f1;"> @ Sparsh Infra was incorporated in the year 2015 with an objective of Investment in real estate and today has an net worth of 50 Million. Our future objective is to make real estate investing more accessible to small investors and provide them potential returns on diversified assets by investing with Integrity, transparency & discipline.</p>
+				</div>
+				<div class="col-lg-7 col-md-9 mt-lg-0 mt-4 row ai_agile-footer1 f2">
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Company</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a class="page-scroll scroll" href="{% url 'property' %}">Properties</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'about' %}">About Us</a>
+							</li>
+							<li>
+								<a class="page-scroll scroll" href="{% url 'howitworks' %}">How It Works</a>
+							</li>
+							<li>
+								<!-- <a class="page-scroll scroll" href="contact.html">Contact Us</a> -->
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 mb-sm-0 mb-4 ml-30 inner-li">
+						<h5 class="mb-3">Others</h5>
+						<ul class="ails-footer-bottom-list">
+							<li>
+								<a href="{% url 'faq' %}">FAQ</a>
+							</li>
+							<li>
+								<a href="{% url 'howitworks' %}">knowledge Center</a>
+							</li>
+							<li>
+								<a href="{% url 'terms' %}">Terms and Conditions</a>
+							</li>
+							<li>
+								<a href="{% url 'privacy' %}">Privacy Policy</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4 inner-li ml-30">
+						<h5 class="mb-3">Contact Us</h5>
+						<ul class="">
+							<li>
+								<a href="#" style="color: #fff;">Phone no:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Email -ID:</a>
+							</li>
+							<li>
+								<a href="#" style="color: #fff;">Address:</a>
+							</li>
+						</ul>
+					</div>
+				<!-- </div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1" style="text-align: center;">
+				<h5 class="mb-3">Need Help? </h5>
+					<ul class="footer-social-icons">
+						<li>
+							<a href="contact.html">
+								Contact us
+							</a>
+						</li>
+						<li>
+							<a href="about.html">
+								knowledge base
+							</a>
+						</li>
+						<li>
+							<a href="dashboard.html">
+								 Pdf document
+							</a>
+						</li>
+					</ul>
+				</div> -->
+				<!-- <div class="col-sm-4 ai_agile-footer1 f1">
+					<ul class="footer-social-icons">
+						<li>
+							<a href="termsandconditions.html">Terms and Conditions</a>
+						</li>
+
+						<li>
+							<a href="privacy.html">Privacy and Policies</a>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+		<div class="agileits_ailayouts-copyright text-center">
+			<p>© 2020 Estate Land. All Rights Reserved | Design by
+				<a href="http://aitareyasolutions.com/" target="=_blank"> Aitareya solutions</a>
+			</p>
+		</div>
+	</div>
+</section>
+<!-- //footer -->
+
+    <!-- js-scripts -->
+
+    <!-- js -->
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- //js -->
+
+    <!-- odometer-script -->
+    <script src="{% static 'js/odometer.js' %}"></script>
+    <script>
+      window.odometerOptions = {
+        format: "(ddd).dd",
+      };
+    </script>
+    <script>
+      setTimeout(function () {
+        jQuery("#ail_stats1").html(125);
+      }, 1500);
+    </script>
+    <script>
+      setTimeout(function () {
+        jQuery("#ail_stats2").html(330);
+      }, 1500);
+    </script>
+    <script>
+      setTimeout(function () {
+        jQuery("#ail_stats3").html(542);
+      }, 1500);
+    </script>
+    <script>
+      setTimeout(function () {
+        jQuery("#ail_stats4").html(222);
+      }, 1500);
+    </script>
+    <!-- //odometer-script -->
+
+    <!-- Banner Responsive slider -->
+    <script src="{% static 'js/responsiveslides.min.js' %}"></script>
+    <script>
+      // You can also use "$(window).load(function() {"
+      $(function () {
+        // Slideshow 4
+        $("#slider4").responsiveSlides({
+          auto: true,
+          pager: false,
+          nav: true,
+          speed: 500,
+          namespace: "callbacks",
+          before: function () {
+            $(".events").append("<li>before event fired.</li>");
+          },
+          after: function () {
+            $(".events").append("<li>after event fired.</li>");
+          },
+        });
+      });
+    </script>
+    <!-- // Banner Responsive slider -->
+
+    <!-- start-smoth-scrolling -->
+    <script src="{% static 'js/SmoothScroll.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+    <script type="text/javascript">
+      jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+          event.preventDefault();
+          $("html,body").animate(
+            { scrollTop: $(this.hash).offset().top },
+            1000
+          );
+        });
+      });
+    </script>
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear'
+				};
+			*/
+
+        $().UItoTop({ easingType: "easeOutQuart" });
+      });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!-- start-smoth-scrolling -->
+
+    <!-- //js-scripts -->
+  </body>
+</html>

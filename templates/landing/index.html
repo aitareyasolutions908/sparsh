@@ -1,0 +1,405 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- end of Navigation -->
+
+<!--Slider-->
+<!-- <div class="slider">
+	<div class="callbacks_container">
+		<ul class="rslides callbacks callbacks1" id="slider4">
+			<li>
+				<div class="slider-img1">
+					<div class="dot">
+						<div class="container">
+							<div class="slider_banner_info_w3ls">
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slider-img2">
+					<div class="dot">
+						<div class="container">
+							<div class="slider_banner_info_w3ls">
+								<h4 class="text-uppercase"><span class="slider-text"></span></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slider-img3">
+					<div class="dot">
+						<div class="container">
+							<div class="slider_banner_info_w3ls">
+
+								<h4 class="text-uppercase"><span class="slider-text"></span></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="slider-img4">
+					<div class="dot">
+						<div class="container">
+							<div class="slider_banner_info_w3ls">
+								<h4 class="text-uppercase"><span class="slider-text"></span></h4>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div> -->
+<div class="clearfix"></div>
+</div>
+<!--//Slider-->
+
+<!-- hightlighted property photos -->
+		<section class="propertyhilighted">
+
+			<div class="container-fluid" style="">
+				<div class="row">
+					<div class="col-sm">
+						<img src="{% static 'images/Picture1.png' %}" alt="">
+					</div>
+					<div class="col-sm">
+						<h4 class="h4">INVEST IN COMMERCIAL <br>REAL ESTATE<h4>
+						<p class="pp1">The better way to invest in real estate! Invest in fractions of premium commercial properties and earn a monthly rental yield & build longterm wealth.</p>
+						<ul class="investment--highlights">
+							<li><i class="fas fa-check-circle"></i>Earn Monthly Income</li>
+							<li><i class="fas fa-check-circle"></i>Long Term Capital Appreciation</li>
+							<li><i class="fas fa-check-circle"></i>Diversify Portfolio</li>
+						</ul>
+						<div class="investbuttons">
+						</div>
+
+
+					</div>
+
+				</div>
+
+			</div>
+			<hr class="line-height">
+		</section>
+
+<!-- end of property heightlighted -->
+<div class="calculator">
+	<div class="claculator--heading">
+		<p class="ppp" id="ppp">Yearly Wise</p>
+		<!-- <p class="ppp1" id="ppp1">Monthly Wise</p> -->
+	</div>
+	<div class="calculator--body">
+		<div class="form">
+				<label for="yearlyinvestment">Yearly Investment (lakhs): </label>
+				<select name="yearlyinvestment" id="yearlyinvestment" style="">
+				  <option>0.0 </option>
+					<option selected>10 </option>
+					<option>15</option>
+
+				  <option>20 </option>
+				  <option >25 </option>
+				  <option>50 </option>
+				  <option>75 </option>
+				  <option>100 </option>
+				  <option>125 </option>
+				  <option>150 </option>
+				</select>
+				<label for="investmentperiod">No.Of Years : </label>
+				<select name="investmentperiod" id="investmentperiod" style="">
+				  <option>0</option>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option selected>5</option>
+				  <option>6</option>
+				  <option>7</option>
+				  <option>8</option>
+				  <option>9</option>
+				  <option>10</option>
+				  <option>11</option>
+				  <option>12</option>
+				  <option>13</option>
+				  <option>14</option>
+				  <option>15</option>
+				  <option>16</option>
+				  <option>17</option>
+				  <option>18</option>
+				  <option>19</option>
+				  <option>20</option>
+				  <option>21</option>
+				  <option>22</option>
+				  <option>23</option>
+				  <option>24</option>
+				  <option>25</option>
+				  <option>26</option>
+				  <option>27</option>
+				  <option>28</option>
+				  <option>29</option>
+				  <option>30</option>
+				  <option>31</option>
+				  <option>32</option>
+				  <option>33</option>
+				  <option>34</option>
+				  <option>35</option>
+				  <option>36</option>
+				  <option>37</option>
+				  <option>38</option>
+				  <option>39</option>
+				  <option>40</option>
+				  <option>41</option>
+				  <option>42</option>
+				  <option>43</option>
+				  <option>44</option>
+				  <option>45</option>
+				  <option>46</option>
+				  <option>47</option>
+				  <option>48</option>
+				  <option>49</option>
+				  <option>50</option>
+				  <option>51</option>
+				  <option>52</option>
+				  <option>53</option>
+				  <option>54</option>
+				  <option>55</option>
+				  <option>56</option>
+				  <option>57</option>
+				  <option>58</option>
+				  <option>59</option>
+				  <!-- <option>60</option> -->
+
+				</select>
+
+				<label for="growthrate">Growt Rate (%): </label>
+				<select name="growthrate" id="growthrate" style="">
+				  <option>0</option>
+				  <option >5</option>
+				  <option selected>10</option>
+				  <option>15</option>
+				  <option>20</option>
+				  <option>25</option>
+				  <option>30</option>
+				  <option>35</option>
+				  <option>40</option>
+				</select>
+				<label for="rentalyeild">Rental Yeild(%) : </label>
+				<select name="rentalyeild" id="rentalyeild" style="">
+				  <option>0</option>
+				  <option>5</option>
+				  <option selected>7</option>
+				  <option>8</option>
+				  <option>9</option>
+				  <option>10</option>
+				  <option>11</option>
+				  <option>12</option>
+				  <option>13</option>
+				</select>
+				<!-- <input type="submit" value="calculator"> -->
+				<button type="submit" onClick="mycalculator()" class="mt-3 btn11">Calculate</button>
+
+		</div>
+
+			<div class="calculatorform2">
+				<div class="value--of--investment mt-3">
+					<p class="valueofinvestment">Profit :</p>
+					<h5 id="valueofinvestment">0</h5>
+				</div>
+				<div class="total--investment--made mt-3">
+					<p class="totalinvestmentmade">Renatl Income:</p>
+					<h5 id="totlainvestmentmade">
+						0
+					</h5>
+				</div>
+				<div class="invesment--grown mt-3 mb-5">
+					<p class="investmentgrown">investment multiplier :</p>
+					<h5 id="investmentgrown">0</h5>
+				</div>
+
+			</div>
+	</div>
+
+</div>
+
+<!-- about -->
+<section class="aboutus" >
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm pl-50 pt-4 pb-4" style="width:20%;">
+			<div class="badge badge-primary text-wrap col1">
+				<h4 class="font-align ">what is <br> Sparsh Infra</h4>
+			</div>
+		  </div>
+		  <div class="col-sm col2">
+			<p class="pt-4 fs-16 p-1">We are a fractional investment platform that helps you own a piece of high-end commercial properties across India. For as little as Rs. 20 lakhs, you can invest in a stable and lucrative asset class that was previously only available to the ultra-rich.</p>
+			<div class="  p-5 ml-30">
+				<a href="{% url 'about' %}" class="bg-cr pad-1 ">Learn more</a>
+			</div>
+		  </div>
+
+		</div>
+	  </div>
+	  <hr class="line-height">
+
+
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm pl-50 pt-4 pb-4">
+			<div class="badge badge-primary text-wrap col1">
+				<h4 class="font-align ">how it <br> works</h4>
+			  </div>
+		  </div>
+		  <div class="col-sm col2">
+			<p class="pt-4 fs-16">We are a fractional investment platform that helps you own a piece of high-end commercial properties across India. For as little as Rs. 20 lakhs, you can invest in a stable and lucrative asset class that was previously only available to the ultra-rich.</p>
+			<div class=" p-5 ml-30">
+				<a href="{% url 'howitworks' %}" class="bg-cr pad-1 ">Learn more</a>
+			</div>
+		  </div>
+
+		</div>
+		<hr class="line-height">
+
+	  </div>
+	  <div class="container">
+		<h3 class="heading text-uppercase  pb-3"><span>About</span> us </h3>
+		<div class="row">
+			<div class="col-sm pt-4 pb-4 pr-5">
+				<div class="badge badge-primary text-wrap col1">
+					<h4 class="font-align ">Who <br> we are?</h4>
+				  </div>
+		  </div>
+			  <div class="col-sm">
+				<p class="mb-4 fs-16"> Sparsh Infra was incorporated in the year 2015 with an objective of Investment in real estate and today has an net worth of 50 Million. Our future objective is to make real estate investing more accessible to small investors and provide them potential returns on diversified assets by investing with Integrity, transparency & discipline.</p>
+			  </div>
+			<!-- <img s/rc="images/certificate.png" alt="" class="img-fluid"> <strong>Certified Company</strong> -->
+		</div>
+
+	</div>
+
+</section>
+
+
+
+<section class="about ">
+
+
+
+
+</section>
+<hr class="line-height">
+<!-- //about -->
+
+<!-- why commercial real estate bottom -->
+<section class="whysection">
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm pl-50 pt-4 pb-4">
+			<div class="badge badge-primary text-wrap col1">
+				<h4 class="font-align pt-4">why <br> commercial <br>Real Estate</h4>
+			  </div>
+		  </div>
+		  <div class="col-sm col2 pb-5">
+			<p class="pt-4 fs-16">Commercial Real Estate (CRE) in India is a multi-billion dollar market that grows larger with each passing year. Unlike the volatile stock market, CRE is a reliable generator of both passive income and long-term wealth. Commercial properties also have an edge over the residential market, the yields in CRE are easily 3x of what investors make from residential properties.<br><br>
+				Therefore, the annual returns on a commercial property easily cross double digits and remain stable in most market conditions. In contrast, the average yield on a residential property is about 3-4%.</p>
+			<div class=" p-5 ml-30">
+				<a href="{% url 'about' %}" class="bg-cr pad-1 ">Learn more</a>
+			</div>
+		  </div>
+
+		</div>
+		<div class="chart container chart-container">
+			<canvas id="myChart" class="pl-5 pr-5" ></canvas>
+		</div>
+
+
+	  </div>
+	  <hr class="line-height">
+</section>
+<!-- why Sparsh Infras or services -->
+<section class="whyestatelands">
+	<div class="container">
+		<div class="row">
+		  <div class="col-sm-4 pl-50 pt-4 pb-4">
+			<div class="badge badge-primary text-wrap col1">
+				<h4 class="font-align ">Why <br> Sparsh Infra</h4>
+			  </div>
+		  </div>
+		  <div class="col-sm-8 col2">
+			<p class="pt-4 fs-16">We are a data-driven, quality-focused company that uses the latest in real estate analytics to find the best opportunities for our investors. With our fractional ownership model and end to end services, Sparsh Infra is your ideal investment partner.</p>
+		  </div>
+
+		</div>
+	  </div>
+</section>
+
+<div class="owl-carousel owl-carousel-category property--carousel">
+	<div class="item">
+	  <div class="category-item">
+		<a href="{% url 'property' %}">
+			<img src="{% static 'images/6.jpg' %}" alt="" class="img__size img-fluid" />
+		</a>
+	  </div>
+	</div>
+	<div class="item">
+		<div class="category-item">
+		  <a href="{% url 'property' %}">
+			  <img src="{% static 'images/5.jpg' %}" alt="" class="img__size img-fluid" />
+		  </a>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="category-item">
+		  <a href="{% url 'property' %}">
+			  <img src="{% static 'images/1.jpg' %}" alt="" class="img__size img-fluid" />
+		  </a>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="category-item">
+		  <a href="{% url 'property' %}">
+			  <img src="{% static 'images/2.jpg' %}" alt="" class="img__size img-fluid" />
+		  </a>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="category-item">
+		  <a href="{% url 'property' %}">
+			  <img src="{% static 'images/6.jpeg' %}" alt="" class="img__size img-fluid" />
+		  </a>
+		</div>
+	  </div>
+	  <div class="item">
+		<div class="category-item">
+		  <a href="{% url 'property' %}">
+			  <img src="{% static 'images/4.jpg' %}" alt="" class="img__size img-fluid" />
+		  </a>
+		</div>
+	  </div>
+
+  </div>
+
+<!-- /newsletter-->
+<section class="newsletter py-5 mt-5">
+	<div class="container">
+
+			<div class="row">
+				<div class="col-sm pl-5">
+				<h3 class="fsr-22">READY TO BUILD YOUR COMMERCIAL REAL ESTATE<br> PORTFOLIO?</h3>
+				</div>
+				<div class="w-100"></div>
+				<div class="col-sm">
+					<div class=" p-5 tx-c">
+						<a href="{% url 'contact' %}" class="bg-cr pad-1 ">BECOME AN INVESTOR</a>
+					</div>
+				</div>
+
+			  </div>
+
+		</div>
+	</div>
+</section>
+<!-- //newsletter-->
+{% endblock %}
